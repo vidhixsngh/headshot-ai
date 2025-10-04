@@ -1,0 +1,153 @@
+.style-selector-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.style-selector-container h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.style-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.styles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.style-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.style-card:hover:not(.disabled) {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.style-card.selected {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.style-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.style-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.style-icon {
+  color: #6b7280;
+}
+
+.style-preview {
+  font-size: 2rem;
+}
+
+.preview-emoji {
+  display: block;
+  text-align: center;
+}
+
+.style-content {
+  margin-bottom: 1rem;
+}
+
+.style-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.style-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.style-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.selection-indicator {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.selection-indicator.active {
+  border-color: #3b82f6;
+  background: #3b82f6;
+}
+
+.checkmark {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.selected-style-info {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  color: #0369a1;
+}
+
+.selected-style-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .style-selector-container {
+    padding: 1rem;
+  }
+  
+  .styles-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .style-card {
+    padding: 1rem;
+  }
+  
+  .style-selector-container h2 {
+    font-size: 1.5rem;
+  }
+}
